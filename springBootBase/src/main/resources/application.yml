@@ -1,0 +1,5 @@
+spring:
+  freemarker:
+    cache: true
+    content-type: "text/html; charset=UTF-8"
+    suffix: ".ftl"
