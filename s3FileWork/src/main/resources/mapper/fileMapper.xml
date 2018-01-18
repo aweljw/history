@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.s3FileWork.mapper.FileMapper">
+	<resultMap type="com.s3FileWork.domain.FileVO" id="fileResultMap">
+		<result column="file_seq" property="fileSeq" />
+		<result column="noti_seq" property="notiSeq" />
+		<result column="file_uuid" property="fileUuid" />
+		<result column="file_name" property="fileName" />
+		<result column="file_reg_date" property="fileRegDate" />
+		<result column="file_del_yn" property="fileDelYn" />
+	</resultMap>
+	
+	<select id="getFileList" resultMap="fileResultMap">
+		select
+			file_seq,
+			noti_seq,
+			file_uuid,
+			file_name,
+			date_format(file_reg_date,'%Y-%m-%d %h:%i') file_reg_date,
+			file_del_yn 
+		from 
+			file_info
+		where
+			file_del_yn = 'N'
+		order by
+			file_reg_date desc
+		limit 10
+	</select>
+	
+	<select id="getFileName" parameterType="String" resultType="String">
+		select
+			file_name
+		from
+			file_info
+		where
+			file_uuid = #{fileUuid}
+	</select>
+
+	<insert id="insertFile">
+		insert into file_info (
+			noti_seq,
+			file_uuid,
+			file_name,
+			file_reg_date,
+			file_del_yn
+		) VALUES (
+			0,
+			#{fileUuid, jdbcType=VARCHAR},
+			#{fileName, jdbcType=VARCHAR},
+			CURRENT_TIMESTAMP,
+			'N'
+		)
+	</insert>
+	
+	<update id="deleteFile" parameterType="String">
+		update
+			file_info
+		set
+			file_del_yn = 'Y'
+		where
+			file_uuid = #{fileUuid}
+	</update>
+</mapper>

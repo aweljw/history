@@ -1,0 +1,33 @@
+server:
+  port: 80
+
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+  freemarker:
+    cache: true
+    content-type: "text/html; charset=UTF-8"
+    suffix: ".ftl"
+
+  datasource:
+    platform: mysql
+    driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    username: xxxxxxxxxxxxx
+    password: xxxxxxxxxxxxx
+
+  profiles:
+    active: local
+
+mybatis:
+  mapper-locations: mapper/*.xml
+
+jsa:
+  aws:
+    access_key_id: xxxxxxxxxxxxxxx
+    secret_access_key: xxxxxxxxxxxxxxx
+
+  s3:
+    bucket: xxxxxx/upload
+    region: ap-northeast-2 
