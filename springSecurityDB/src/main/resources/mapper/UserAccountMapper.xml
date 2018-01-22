@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springSecurityDB.mapper.UserAccountMapper">
+	<parameterMap type="com.springSecurityDB.domain.UserAccountVO" id="UserAccountParameterMap">
+		<parameter property="userId" />
+		<parameter property="password" />
+		<parameter property="encryptedPassword" />
+	</parameterMap>
+
+	<resultMap type="com.springSecurityDB.domain.UserAccountVO" id="UserAccountResultMap">
+		<result column="user_id" property="userId" />
+		<result column="password" property="password" />
+		<result column="authority" property="role" />
+	</resultMap>
+
+	<select id="findByUserid" parameterType="String" resultMap="UserAccountResultMap">
+		select ua.user_id,
+	   		   ua.password,
+	   		   ar.authority
+		from
+			user_account ua
+		inner join
+			authorities ar
+		on
+			ua.user_id = ar.user_id
+		where
+			ua.user_id = #{userId}
+	</select>
+	
+	<insert id="accoutRegister" parameterMap="UserAccountParameterMap" >
+		insert into user_account (
+			user_id,
+			password,
+			enabled
+		) VALUES (
+			#{userId},
+			#{encryptedPassword},
+		 	true
+		)
+	</insert>
+
+</mapper>
