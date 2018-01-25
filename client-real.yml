@@ -1,2 +1,6 @@
 woong:
   profile: real
+
+configServerTest:
+  title: 타이틀입니다.(real)
+  content: 내용입니다.(real)
