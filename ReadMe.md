@@ -1,12 +1,12 @@
-#ㆍ springBootBase : spring boot basic project
+>#ㆍ springBootBase : spring boot basic project
 
-##ㆍ springSecurityInmemory : Spring Security using Memory
+>##ㆍ springSecurityInmemory : Spring Security using Memory
 
-###ㆍ springSecurityDB : Spring Security using DB
+>###ㆍ springSecurityDB : Spring Security using DB
 
-####ㆍ s3FileWork : Upload, download, and delete files using AWS-S3
+>####ㆍ s3FileWork : Upload, download, and delete files using AWS-S3
 
-#####ㆍ spring cloud
+>#####ㆍ spring cloud
 
 	- configServer : config 설정
 
