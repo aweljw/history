@@ -6,9 +6,9 @@
 >* IAM 사용자 권한등록
 >
 >* 자격증명 저장위치
->Linux, macOS, or Unix의 ~/.aws/credentials
->Windows의 C:\Users\USERNAME \.aws\credentials
->https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
+>	Linux, macOS, or Unix의 ~/.aws/credentials
+>	Windows의 C:\Users\USERNAME \.aws\credentials
+>	https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
 >* email 등록 (추가 설정전에는 인증된 도메인 주소로만 메일전송 가능)
 >
 >## spring cloud (springCloudConfig, springCloudClient)
