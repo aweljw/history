@@ -1,0 +1,7 @@
+spring:
+  freemarker:
+    cache: false
+    enabled: true
+    template-loader-path: classpath:/templates/
+    expose-request-attributes: true
+    expose-spring-macro-helpers: true
