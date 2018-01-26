@@ -15,4 +15,4 @@
 >	1. 설정파일 수정
 >	2. http:localhost:8080/refresh(client주소) post 호출 필요(body 빈값)
 >	
->	**`※ 적용될 소스에 @RefreshScope 어노테이션 필수`**
+>	   **`※ 적용될 소스에 @RefreshScope 어노테이션 필수`**
