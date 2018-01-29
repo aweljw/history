@@ -14,7 +14,10 @@ AWS SES MAIL발송 사용 예제
 2. Simple Email Service로 이동
 
 000
-![](C://githubByWoong/test/img/capture1.PNG)
+![](/img/capture1.PNG)
+![](img/capture1.PNG)
+![](test/img/capture1.PNG)
+![](/test/img/capture1.PNG)
 111
 ![](C://githubByWoong/test/img/capture1.PNG)
 222
