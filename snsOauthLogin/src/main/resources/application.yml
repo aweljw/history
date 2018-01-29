@@ -1,0 +1,8 @@
+sns:
+  twitter:
+    consumerKey: xxxxxxxxxxxxxxxxxxxxxxxxxx
+    consumerSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  facebook:
+    facebookClientId: xxxxxxxxxxxxxxxxx
+    redirectUrl: https://www.facebook.com/v2.11/dialog/oauth?client_id=1524838067600897&redirect_uri=http://localhost.co.kr:8282/sns/snsLoginSuccess&scope=public_profile,email
+    facebookClientSecretKey: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
