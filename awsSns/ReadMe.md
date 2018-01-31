@@ -7,9 +7,9 @@ AWS - SNS 사용 예제
    - 자격 증명 등록
    		- 자격 증명에 대한 종류는 여러가지가 존재하나 해당 예제에서는 AWS에서 권장하는 방법으로 수행한다.
    		- 아래의 해당되는 위치에 ACCESS_KEY, SECRET_KEY를 입력
-   	      Linux, macOS, or Unix : ~/.aws/credentials
-             Windows : C:\Users\USERNAME \.aws\credentials
-		     ※ 참조 : https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
+   		  Linux, macOS, or Unix : ~/.aws/credentials
+          Windows : C:\Users\USERNAME \.aws\credentials
+		  ※ 참조 : https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 2. Simple Notification Service로 이동
 ![](/img/awsSns/capture1.PNG)
@@ -23,15 +23,15 @@ AWS - SNS 사용 예제
    	- EU(아일랜드)
    	- 아시아 태평양(도쿄)
    	- 아시아 태평양(싱가)
-![](/img/awsSns/capture2.PNG)
+![](img/awsSns/capture2.PNG)
 
 ### 2. CONSOLE 사용방법
 
 1. 레프트 바 메뉴에서 문자 메시지(SMS) 클릭
-![](/img/awsSns/capture3.PNG)
+![](img/awsSns/capture3.PNG)
 
 2. 메인 메뉴에서 문자 메시지 기본 설정 관리 클릭
-![](/img/awsSns/capture4.PNG)
+![](img/awsSns/capture4.PNG)
 
 3. 기본설정 업데이트 하기
    ※ CONSOLE 발송에 대한 설정으로 SDK발송설정과는 별개
@@ -58,14 +58,14 @@ AWS - SNS 사용 예제
 		- Amazon SNS에서 일일 SMS 사용 보고서를 수신할 Amazon S3 버킷의 이름을 입력합니다. 일일 사용 보고서를 수신할 Amazon S3 버킷을 		  지정하지 않으면 Amazon SNS는 일일 사용 보고서를 생성하지 않습니다.
 
 4. 메인 메뉴에서 문자 메시지 게시(SMS) 클릭
-![](/img/awsSns/capture6.PNG)
+![](img/awsSns/capture6.PNG)
 
 5. 문자 메시지 발송
    번호 ex) 010-1111-2222 > 821011112222
-   ![](/img/awsSns/capture7.PNG)
+   ![](img/awsSns/capture7.PNG)
 
 6. 발송정보 통계화면에서 확인
-   ![](/img/awsSns/capture8.PNG)
+   ![](img/awsSns/capture8.PNG)
 
 ## 3-1. SDK 사용방법
 
