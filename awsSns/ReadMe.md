@@ -87,6 +87,7 @@ AWS - SNS 사용 예제
                 <version>1.11.271</version>
             </dependency>
 	- AwsConfig.java (SMS 기본설정)
+
 	  location : com.awsSns.config
 
       ※ 참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
