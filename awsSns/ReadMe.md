@@ -9,38 +9,35 @@ AWS - SNS 사용 예제
    		- 아래의 해당되는 위치에 ACCESS_KEY, SECRET_KEY를 입력
    			Linux, macOS, or Unix : ~/.aws/credentials
 			Windows : C:\Users\USERNAME \.aws\credentials
+
 			※ 참조 : https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 2. Simple Notification Service로 이동
-<!--![](/img/awsSns/capture1.PNG)-->
-![](C://awsSns/img/capture1.PNG)
+![](/img/awsSns/capture1.PNG)
+
 
 3. 리전(지역) 선택 후, 시작하기 버튼 클릭
    - 목록에는 많은 리전들이 존재하지만 SMS 메시징을 지원하는 리전은 아래와 같다.(2018.01.29 기준)
-     ※ https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_supported-countries.html
+   ※ https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_supported-countries.html
    	- 미국 동부(버지니아 북부)
    	- 미국 서부(오레곤)
    	- EU(아일랜드)
    	- 아시아 태평양(도쿄)
    	- 아시아 태평양(싱가)
-<!--![](/img/awsSns/capture2.PNG)-->
-![](C://awsSns/img/capture2.PNG)
+![](/img/awsSns/capture2.PNG)
 
 ### 2. CONSOLE 사용방법
 
 1. 레프트 바 메뉴에서 문자 메시지(SMS) 클릭
-<!--![](/img/awsSns/capture3.PNG)-->
-![](C://awsSns/img/capture3.PNG)
+![](/img/awsSns/capture3.PNG)
 
 2. 메인 메뉴에서 문자 메시지 기본 설정 관리 클릭
-<!--![](/img/awsSns/capture4.PNG)-->
-![](C://awsSns/img/capture4.PNG)
+![](/img/awsSns/capture4.PNG)
 
 3. 기본설정 업데이트 하기
    ※ CONSOLE 발송에 대한 설정으로 SDK발송설정과는 별개
-   참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
-   <!--![](/img/awsSns/capture5.PNG)-->
-   ![](C://awsSns/img/capture5.PNG)
+    참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
+   ![](/img/awsSns/capture5.PNG)
 
 	- 기본메시지 유형
 		- [Promotional] (기본값) – - 중요하지 않은 메시지입니다(예: 마케팅 메시지). Amazon SNS는 최소 비용이 발생하도록
@@ -62,30 +59,27 @@ AWS - SNS 사용 예제
 		- Amazon SNS에서 일일 SMS 사용 보고서를 수신할 Amazon S3 버킷의 이름을 입력합니다. 일일 사용 보고서를 수신할 Amazon S3 버킷을 		  지정하지 않으면 Amazon SNS는 일일 사용 보고서를 생성하지 않습니다.
 
 4. 메인 메뉴에서 문자 메시지 게시(SMS) 클릭
-<!--![](/img/awsSns/capture6.PNG)-->
-![](C://awsSns/img/capture6.PNG)
+![](/img/awsSns/capture6.PNG)
 
 5. 문자 메시지 발송
    번호 ex) 010-1111-2222 > 821011112222
-
-   <!--![](/img/awsSns/capture7.PNG)-->
-   ![](C://awsSns/img/capture7.PNG)
+   ![](/img/awsSns/capture7.PNG)
 
 6. 발송정보 통계화면에서 확인
-   <!--![](/img/awsSns/capture8.PNG)-->
-   ![](C://awsSns/img/capture8.PNG)
+   ![](/img/awsSns/capture8.PNG)
 
 ## 3-1. SDK 사용방법
 
 1. 기본설정
 	- pom.xml dependency 추가
+
 			<dependency>
                 <groupId>com.amazonaws</groupId>
                 <artifactId>aws-java-sdk-sns</artifactId>
                 <version>1.11.271</version>
             </dependency>
 	- AwsConfig.java (SMS 기본설정)
-	  location : com.awsSns.config
+	  location : com.awsSns.config 
       ※ 참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
       참조사이트 샘플의 AmazonSNSClient class의 경우 현재 사용하지 않기에 소스 변경(2018.01.30 기준)
 
@@ -108,8 +102,8 @@ AWS - SNS 사용 예제
 		3. 문자발송 확인
 
 		※ 아래 적용된 설정의 경우 기본설정보다 우선적으로 적용된다.
-        - 기본메세지 유형 : AWS.SNS.SMS.SMSType
-        - 계정 지출 한도  : AWS.SNS.SMS.MaxPrice
-        - 기본 발신자 ID  : AWS.SNS.SMS.SenderID
+        	- 기본메세지 유형 : AWS.SNS.SMS.SMSType
+        	- 계정 지출 한도  : AWS.SNS.SMS.MaxPrice
+        	- 기본 발신자 ID  : AWS.SNS.SMS.SenderID
 
 ## 3-4 구독을 통한 여러 전화번호로 SMSM 전송 (추후 업데이트...)
