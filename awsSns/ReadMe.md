@@ -16,12 +16,13 @@ AWS - SNS 사용 예제
 
 2. Simple Notification Service로 이동
 
-![](/img/awsSns/capture1.PNG)
+![](img/awsSns/capture1.PNG)
 
 3. 리전(지역) 선택 후, 시작하기 버튼 클릭
    - 목록에는 많은 리전들이 존재하지만 SMS 메시징을 지원하는 리전은 아래와 같다.(2018.01.29 기준)
 
      ※ https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_supported-countries.html
+
    	- 미국 동부(버지니아 북부)
    	- 미국 서부(오레곤)
    	- EU(아일랜드)
