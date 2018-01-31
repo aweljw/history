@@ -40,50 +40,53 @@ AWS SES MAIL발송 사용 예제
 
 ### AWS SES EMAIL 샘플예제 정보
 
-###### 실행방법 : 서버 시작 시, 1,번과 2번의 해당되는 메일 발송이 시작된다.
-   - 시작전 소스의 이메일 및 원하는 내용으로 수정을 한다.
-
-##### 1. AWS SDK for Java를 사용하여 이메일 전송 (첨부파일 불가)
-   https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/send-using-sdk-java.html
-
-# pom.xml
-	- aws-java-sdk-ses dependency 추가
-		<dependency>
-		    <groupId>com.amazonaws</groupId>
-		    <artifactId>aws-java-sdk-ses</artifactId>
-		    <version>1.11.269</version>
-		</dependency>
-
-# SendMail.java
-	- location : com.awsSesUsingSDK.sendMail
-
-	- 변수정보
-		FROM      : 보내는 사람
-		TO        : 받는사람
-		SUBJECT   : 제목
-		HTMLBODY  : 내용에 HTML사용
-		TEXTBODY  : 내용에 TEXT사용
-		CONFIGSET : HEADER정보 (사용안할 시 주석처리)	
-			https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/using-configuration-sets-in-email.html
-
-#### 2. Amazon SES API를 사용하여 원시 이메일 전송 (첨부파일 가능)
-   https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/send-email-raw.html
-
-# pom.xml
+##### pom.xml
 	- aws-java-sdk-ses, javax.mail dependency 추가
 		<dependency>
 		    <groupId>com.amazonaws</groupId>
 		    <artifactId>aws-java-sdk-ses</artifactId>
 		    <version>1.11.269</version>
 		</dependency>
-		<dependency>
-			<groupId>com.sun.mail</groupId>
-			<artifactId>javax.mail</artifactId>
-			<version>1.6.0</version>
+        <dependency>
+		    <groupId>com.sun.mail</groupId>
+		    <artifactId>javax.mail</artifactId>
+		    <version>1.6.0</version>
 		</dependency>
 
-# SendMailRaw.java
-	- location : com.awsSesUsingSDK.sendMail
+##### 1. AWS SDK for Java를 사용하여 이메일 전송 (첨부파일 불가)
+	- 실행순서
+		1. 서버를 시작한다.
+    	2. localhost:8080/sendMail 호출 (가급적 postman을 사용)
+    		- METHOD : GET
+    		- BODY : 빈값
+    	3. 전송된 메일을 확인한다.
+    - 변수정보
+    	- FROM      : 보내는 사람
+		- TO        : 받는사람
+		- SUBJECT   : 제목
+		- HTMLBODY  : 내용에 HTML사용
+		- TEXTBODY  : 내용에 TEXT사용
+		- CONFIGSET : HEADER정보 (사용안할 시 주석처리)	
+		  ※ CONFIGSET참조 : https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/using-configuration-sets-in-email.html
+
+   ※ 참조 : https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/send-using-sdk-java.html
+
+##### 2. Amazon SES API를 사용하여 원시 이메일 전송 (첨부파일 가능)
+	- 실행순서
+		1. 서버를 시작한다.
+    	2. localhost:8080/sendMailRaw 호출
+    		- METHOD : GET
+    		- BODY : 빈값
+    	3. 전송된 메일을 확인한다.
+    - 변수정보
+    	- SENDER : 보내는 사람
+    	- RECIPIENT : 받는사람
+    	- SUBJECT : 제목
+    	- BODY_TEXT : 내용에 TEXT사용
+    	- BODY_HTML : 내용에 HTML사용
+    	- ATTACHMENT : 첨부파일
+    	- CONFIGURATION_SET : HEADER정보 (사용안할 시 주석처리)
+   ※ 참조 : https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/send-email-raw.html
 
 ※ 지원되지 않는 첨부파일
 	https://docs.aws.amazon.com/ko_kr/ses/latest/DeveloperGuide/mime-types-appendix.html
