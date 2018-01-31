@@ -2,7 +2,8 @@
 >## springSecurityInmemory : Spring Security using Memory
 >## springSecurityDB : Spring Security using DB
 >## s3FileWork : Upload, download, and delete files using AWS-S3
->## awsSes : Using the aws email service
+>## AWS-SNS : Using the aws sms service
+>## AWS-SES : Using the aws email service
 >* IAM 사용자 권한등록
 >
 >* 자격증명 저장위치
