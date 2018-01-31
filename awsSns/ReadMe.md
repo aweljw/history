@@ -15,6 +15,7 @@ AWS - SNS 사용 예제
 		  ※ 참조 : https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 2. Simple Notification Service로 이동
+
 ![](/img/awsSns/capture1.PNG)
 
 3. 리전(지역) 선택 후, 시작하기 버튼 클릭
@@ -38,6 +39,7 @@ AWS - SNS 사용 예제
 
 3. 기본설정 업데이트 하기
    ※ CONSOLE 발송에 대한 설정으로 SDK발송설정과는 별개
+
    참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
 
    ![](/img/awsSns/capture5.PNG)
