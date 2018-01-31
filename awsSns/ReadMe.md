@@ -7,16 +7,19 @@ AWS - SNS 사용 예제
    - 자격 증명 등록
    		- 자격 증명에 대한 종류는 여러가지가 존재하나 해당 예제에서는 AWS에서 권장하는 방법으로 수행한다.
    		- 아래의 해당되는 위치에 ACCESS_KEY, SECRET_KEY를 입력
+
    		  Linux, macOS, or Unix : ~/.aws/credentials
+
           Windows : C:\Users\USERNAME \.aws\credentials
+
 		  ※ 참조 : https://docs.aws.amazon.com/ko_kr/sdk-for-java/v1/developer-guide/setup-credentials.html
 
 2. Simple Notification Service로 이동
 ![](/img/awsSns/capture1.PNG)
 
-
 3. 리전(지역) 선택 후, 시작하기 버튼 클릭
    - 목록에는 많은 리전들이 존재하지만 SMS 메시징을 지원하는 리전은 아래와 같다.(2018.01.29 기준)
+
      ※ https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_supported-countries.html
    	- 미국 동부(버지니아 북부)
    	- 미국 서부(오레곤)
@@ -35,8 +38,9 @@ AWS - SNS 사용 예제
 
 3. 기본설정 업데이트 하기
    ※ CONSOLE 발송에 대한 설정으로 SDK발송설정과는 별개
-     참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
-     ![](/img/awsSns/capture5.PNG)
+   참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
+
+   ![](/img/awsSns/capture5.PNG)
 
 	- 기본메시지 유형
 		- [Promotional] (기본값) – - 중요하지 않은 메시지입니다(예: 마케팅 메시지). Amazon SNS는 최소 비용이 발생하도록
@@ -81,6 +85,7 @@ AWS - SNS 사용 예제
 	  location : com.awsSns.config
 
       ※ 참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
+
       참조사이트 샘플의 AmazonSNSClient class의 경우 현재 사용하지 않기에 소스 변경(2018.01.30 기준)
 
       	※ CONSOLE 설정과 내용 동일
