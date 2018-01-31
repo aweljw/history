@@ -23,11 +23,12 @@ AWS - SNS 사용 예제
 
      ※ https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_supported-countries.html
 
-   	- 미국 동부(버지니아 북부)
-   	- 미국 서부(오레곤)
-   	- EU(아일랜드)
-   	- 아시아 태평양(도쿄)
-   	- 아시아 태평양(싱가)
+   		- 미국 동부(버지니아 북부)
+   		- 미국 서부(오레곤)
+   		- EU(아일랜드)
+   		- 아시아 태평양(도쿄)
+   		- 아시아 태평양(싱가포르)
+
 ![](img/awsSns/capture2.PNG)
 
 ### 2. CONSOLE 사용방법
