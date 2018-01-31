@@ -40,11 +40,12 @@ AWS - SNS 사용 예제
 ![](img/awsSns/capture4.PNG)
 
 3. 기본설정 업데이트 하기
+
    ※ CONSOLE 발송에 대한 설정으로 SDK발송설정과는 별개
 
    참조 : https://docs.aws.amazon.com/ko_kr/sns/latest/dg/sms_preferences.html
 
-   ![](/img/awsSns/capture5.PNG)
+   ![](img/awsSns/capture5.PNG)
 
 	- 기본메시지 유형
 		- [Promotional] (기본값) – - 중요하지 않은 메시지입니다(예: 마케팅 메시지). Amazon SNS는 최소 비용이 발생하도록
