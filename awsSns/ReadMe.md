@@ -104,12 +104,16 @@ AWS - SNS 사용 예제
 
 ## 3-2 문자발송 - 기본설정
 		1. 서버 시작
-		2. http://localhost:8080/sendSms (가급적 postMan 사용)
+		2. http://localhost:8080/sendSms 호출 (가급적 postMan 사용)
+			- METHOD : GET
+			- BODY : 빈값
 		3. 문자발송 확인
 
 ## 3-3 문자발송 - 기본설정보다 우선순위로 적용되는 설정
 		1.서버 시작
-		2. http://localhost:8080/sendSmsSpecial
+		2. http://localhost:8080/sendSmsSpecial 호출
+			- METHOD : GET
+			- BODY : 빈값
 		3. 문자발송 확인
 
 		※ 아래 적용된 설정의 경우 기본설정보다 우선적으로 적용된다.
